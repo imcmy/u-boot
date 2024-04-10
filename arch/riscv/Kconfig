@@ -45,6 +45,9 @@ config TARGET_TH1520_LPI4A
 config TARGET_XILINX_MBV
 	bool "Support AMD/Xilinx MicroBlaze V"
 
+config TARGET_ROCKET_CHIP_VPK120
+	bool "Support Rocket Chip on VPK120"
+
 endchoice
 
 config SYS_ICACHE_OFF
@@ -90,6 +93,7 @@ source "board/sophgo/milkv_duo/Kconfig"
 source "board/starfive/visionfive2/Kconfig"
 source "board/thead/th1520_lpi4a/Kconfig"
 source "board/xilinx/mbv/Kconfig"
+source "board/custom/rocket-chip-vpk120/Kconfig"
 
 # platform-specific options below
 source "arch/riscv/cpu/andesv5/Kconfig"
