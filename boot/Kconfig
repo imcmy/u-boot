@@ -38,8 +38,8 @@ config BUTTON_CMD
 menuconfig FIT
 	bool "Flattened Image Tree (FIT)"
 	select HASH
-	select MD5
-	select SHA1
+	select MD5 if !TARGET_ROCKET_CHIP_VPK120
+	select SHA1 if !TARGET_ROCKET_CHIP_VPK120
 	imply SHA256
 	help
 	  This option allows you to boot the new uImage structure,

@@ -13,13 +13,13 @@ config SYS_CONFIG_NAME
 	default "rocket-chip-vpk120"
 
 config TEXT_BASE
-	default 0x70000000
+	default 0x800040000
 
 config BOARD_SPECIFIC_OPTIONS # dummy
 	def_bool y
 	select GENERIC_RISCV
 	imply SMP
 	imply BOARD_LATE_INIT
-	imply SYS_NS16550
+	imply DM_SERIAL
 
 endif
