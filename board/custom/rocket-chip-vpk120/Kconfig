@@ -1,0 +1,25 @@
+if TARGET_ROCKET_CHIP_VPK120
+
+config SYS_BOARD
+	default "rocket-chip-vpk120"
+
+config SYS_VENDOR
+	default "custom"
+
+config SYS_CPU
+	default "generic"
+
+config SYS_CONFIG_NAME
+	default "rocket-chip-vpk120"
+
+config TEXT_BASE
+	default 0x800040000
+
+config BOARD_SPECIFIC_OPTIONS # dummy
+	def_bool y
+	select GENERIC_RISCV
+	imply SMP
+	imply BOARD_LATE_INIT
+	imply DM_SERIAL
+
+endif
